@@ -1,4 +1,4 @@
-/ app.js
+// app.js
 
 let rfmData = [];
 let customersChart, revenueChart, rfmChart;
