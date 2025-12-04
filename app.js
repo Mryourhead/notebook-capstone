@@ -247,7 +247,7 @@ function buildClusterAggregatesAndCharts(filterSegment = "ALL") {
         {
           label: "Frequency",
           data: freq,
-          backgroundColor: "rgba(25, 118, 210, 0.9)"
+          backgroundColor: "rgba(255, 99, 132, 0.9)"
         },
         {
           label: "Monetary",
@@ -259,10 +259,28 @@ function buildClusterAggregatesAndCharts(filterSegment = "ALL") {
     options: {
       responsive: true,
       scales: {
-        y: { beginAtZero: true }
-      }
-    }
-  });
+        rec: {
+          type: 'linear',
+          position: 'left', // Misalnya Recency dan Monetary di sebelah kiri
+          beginAtZero: true,
+          title: { display: true, text: 'Recency/Monetary' }
+        },
+        freq: {
+          type: 'linear',
+          position: 'right', // Frequency di sebelah kanan
+          beginAtZero: true,
+          grid: { drawOnChartArea: false }, // Jangan tampilkan garis grid
+          title: { display: true, text: 'Frequency' }
+        },
+        mon: {
+          type: 'linear',
+          position: 'left',
+          beginAtZero: true,
+          display: false // Sembunyikan sumbu monetary agar berbagi dengan Recency (jika skalanya mirip), atau buat sumbu terpisah lagi.
+        }
+      }
+    }
+  });
 }
 
 // ======================== CLUSTER SUMMARY TABLE ========================
