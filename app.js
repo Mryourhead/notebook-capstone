@@ -235,48 +235,48 @@ function buildClusterAggregatesAndCharts(filterSegment = "ALL") {
   });
 
   rfmChart = new Chart(ctxRfm, {
-    type: "bar",
-    data: {
-      labels,
-      datasets: [
-        {
-          label: "Recency (days)",
-          data: rec,
-          backgroundColor: "rgba(144, 202, 249, 0.95)"
-        },
-        {
-          label: "Frequency",
-          data: freq,
-          backgroundColor: "rgba(255, 99, 132, 0.9)"
-        },
-        {
-          label: "Monetary",
-          data: mon,
-          backgroundColor: "rgba(21, 101, 192, 0.9)"
-        }
-      ]
-    },
-    options: {
-      responsive: true,
-      scales: {
-        rec: {
-          type: 'linear',
-          position: 'left', // Misalnya Recency dan Monetary di sebelah kiri
-          beginAtZero: true,
-          title: { display: true, text: 'Recency/Monetary' }
+    type: "bar",
+    data: {
+      labels,
+      datasets: [
+        {
+          label: "Recency (days)",
+          data: rec,
+          backgroundColor: "rgba(144, 202, 249, 0.95)", // Biru Muda
+          yAxisID: 'rec_mon_axis' // Sumbu Y Bersama Kiri
         },
-        freq: {
-          type: 'linear',
-          position: 'right', // Frequency di sebelah kanan
-          beginAtZero: true,
-          grid: { drawOnChartArea: false }, // Jangan tampilkan garis grid
-          title: { display: true, text: 'Frequency' }
+        {
+          label: "Frequency",
+          data: freq,
+          backgroundColor: "rgba(255, 99, 132, 0.9)", // Warna Kontras (Merah)
+          yAxisID: 'freq_axis' // Sumbu Y Khusus Kanan
         },
-        mon: {
+        {
+          label: "Monetary",
+          data: mon,
+          backgroundColor: "rgba(21, 101, 192, 0.9)", // Biru Tua
+          yAxisID: 'rec_mon_axis' // Sumbu Y Bersama Kiri
+        }
+      ]
+    },
+    options: {
+      responsive: true,
+      scales: {
+        // Sumbu Kiri: Untuk Recency dan Monetary (skala lebih besar)
+        rec_mon_axis: {
           type: 'linear',
           position: 'left',
           beginAtZero: true,
-          display: false // Sembunyikan sumbu monetary agar berbagi dengan Recency (jika skalanya mirip), atau buat sumbu terpisah lagi.
+          title: { display: true, text: 'Recency (Days) / Monetary (Value)' },
+          // Pastikan Monetary (value) dan Recency (days) menggunakan skala ini
+        },
+        // Sumbu Kanan: Untuk Frequency (skala kecil)
+        freq_axis: {
+          type: 'linear',
+          position: 'right',
+          beginAtZero: true,
+          grid: { drawOnChartArea: false }, // Penting: Menyembunyikan grid dari sumbu kanan agar grafik tidak terlalu ramai
+          title: { display: true, text: 'Frequency (Count)' }
         }
       }
     }
