@@ -1,16 +1,16 @@
 # notebook-capstone
-# Customer Segmentation for Personalized Retail Marketing 🛍️
+# Customer Segmentation for Personalized Retail Marketing 
 
 Project ini adalah implementasi Machine Learning untuk melakukan segmentasi pelanggan (Customer Segmentation) guna mendukung strategi pemasaran ritel yang lebih personal. Project ini menggunakan metode analisis **RFM (Recency, Frequency, Monetary)** dan algoritma clustering (seperti K-Means) untuk mengelompokkan pelanggan berdasarkan perilaku transaksi mereka.
 
 Hasil analisis divisualisasikan melalui dashboard interaktif yang dideploy menggunakan **Streamlit** dan **Netlify**.
 
-## 🚀 Demo Aplikasi
+## Demo Aplikasi
 
 - **Streamlit Dashboard (Python):** [https://notebook-capstone-a25-cs273.streamlit.app/]
 - **Web Dashboard (Netlify - HTML/JS):** [https://capstonea25.netlify.app/]
 
-## 📂 Struktur Repository
+## Struktur Repository
 
 Berikut adalah penjelasan mengenai file dan folder dalam repository ini:
 
@@ -23,7 +23,7 @@ Berikut adalah penjelasan mengenai file dan folder dalam repository ini:
 | `rfm_cluster_result.csv` | File output hasil clustering yang digunakan oleh dashboard untuk menampilkan data. |
 | `requirements.txt` | Daftar library Python yang dibutuhkan untuk menjalankan project ini. |
 
-## 🛠️ Teknologi yang Digunakan
+## Teknologi yang Digunakan
 
 - **Language:** Python, JavaScript (Visualisasi Web)
 - **Data Processing:** Pandas, NumPy
@@ -31,7 +31,7 @@ Berikut adalah penjelasan mengenai file dan folder dalam repository ini:
 - **Visualization:** Plotly, Matplotlib
 - **Deployment:** Streamlit Cloud, Netlify
 
-## 💻 Cara Menjalankan di Lokal (Local Installation)
+## Cara Menjalankan di Lokal (Local Installation)
 
 1. **Clone Repository**
    ```bash
@@ -49,7 +49,7 @@ Berikut adalah penjelasan mengenai file dan folder dalam repository ini:
     streamlit run app.py
     ```
 
-## 🔄 Workflow & Update Dataset
+## Workflow & Update Dataset
 
 Sistem ini memisahkan antara proses **Training (Notebook)** dan **Visualisasi (App)**. Dashboard (`app.py` dan `app.js`) **tidak** melakukan training ulang secara otomatis, melainkan hanya membaca hasil yang sudah jadi di `rfm_cluster_result.csv`.
 
