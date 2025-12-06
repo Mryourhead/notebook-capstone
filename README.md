@@ -79,3 +79,8 @@ git add rfm_cluster_result.csv
 git commit -m "Update: Refresh data clustering dengan transaksi terbaru"
 git push origin main
 ```
+#### Langkah 4: Selesai
+
+- Streamlit: Akan otomatis mendeteksi perubahan di repo dan merestart aplikasi dengan data baru.
+
+- Netlify: Jika script app.js mengambil data raw dari GitHub atau file lokal, tampilan akan otomatis terupdate.
