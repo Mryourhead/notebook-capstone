@@ -2,12 +2,12 @@
 
 Project ini adalah implementasi Machine Learning untuk melakukan segmentasi pelanggan (Customer Segmentation) guna mendukung strategi pemasaran ritel yang lebih personal. Project ini menggunakan metode analisis **RFM (Recency, Frequency, Monetary)** dan algoritma clustering (seperti K-Means) untuk mengelompokkan pelanggan berdasarkan perilaku transaksi mereka.
 
-Hasil analisis divisualisasikan melalui dashboard interaktif yang dideploy menggunakan **Streamlit** dan **Netlify**.
+Hasil analisis divisualisasikan melalui dashboard interaktif yang dideploy menggunakan **Streamlit** dan **Page Github**.
 
 ## Demo Aplikasi
 
 - **Streamlit Dashboard (Python):** [https://notebook-capstone-a25-cs273.streamlit.app/]
-- **Web Dashboard (Netlify - HTML/JS):** [https://capstonea25.netlify.app/]
+- **Web Dashboard (Github - HTML/JS):** [https://mryourhead.github.io/notebook-capstone/]
 
 ## Struktur Repository
 
@@ -18,7 +18,7 @@ Berikut adalah penjelasan mengenai file dan folder dalam repository ini:
 | `dataset/` | Folder berisi data mentah (raw data) transaksi ritel. |
 | `notebook/` | Berisi Jupyter Notebook untuk proses pembersihan data, EDA, perhitungan RFM, dan modeling Clustering. |
 | `app.py` | Source code utama untuk dashboard berbasis **Streamlit**. |
-| `app.js` & `index.html` | Source code untuk visualisasi frontend yang dideploy ke **Netlify**. |
+| `app.js` & `index.html` | Source code untuk visualisasi frontend yang dideploy ke **Pages Github**. |
 | `rfm_cluster_result.csv` | File output hasil clustering yang digunakan oleh dashboard untuk menampilkan data. |
 | `requirements.txt` | Daftar library Python yang dibutuhkan untuk menjalankan project ini. |
 
