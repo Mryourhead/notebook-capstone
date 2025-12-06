@@ -1,4 +1,3 @@
-# notebook-capstone
 # Customer Segmentation for Personalized Retail Marketing 
 
 Project ini adalah implementasi Machine Learning untuk melakukan segmentasi pelanggan (Customer Segmentation) guna mendukung strategi pemasaran ritel yang lebih personal. Project ini menggunakan metode analisis **RFM (Recency, Frequency, Monetary)** dan algoritma clustering (seperti K-Means) untuk mengelompokkan pelanggan berdasarkan perilaku transaksi mereka.
